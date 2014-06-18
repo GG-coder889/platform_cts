@@ -26,8 +26,8 @@ import com.android.cts.util.TimeoutReq;
  */
 public class GLPrimitiveBenchmark extends CtsActivityInstrumentationTestCase2<GLPrimitiveActivity> {
 
-    private static final int NUM_FRAMES = 100;
-    private static final int NUM_ITERATIONS = 8;
+    private static final int NUM_FRAMES = 10; // 100
+    private static final int NUM_ITERATIONS = 2; // 8
     private static final int TIMEOUT = 1000000;
 
     public GLPrimitiveBenchmark() {

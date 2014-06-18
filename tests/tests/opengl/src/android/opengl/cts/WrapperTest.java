@@ -196,7 +196,7 @@ public class WrapperTest extends AndroidTestCase {
             EGL14.eglTerminate(mEGLDisplay);
         }
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 50; i++) {
             if ((i % 25) == 0) {
                 Log.d(TAG, "iteration " + i);
             }

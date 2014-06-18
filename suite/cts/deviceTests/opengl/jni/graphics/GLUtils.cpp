@@ -15,6 +15,7 @@
 #include "GLUtils.h"
 #include <stdlib.h>
 #include <sys/time.h>
+#include <arpa/inet.h>
 
 #include <android/asset_manager_jni.h>
 
@@ -76,8 +77,10 @@ GLuint GLUtils::loadTexture(const char* path) {
     return textureId;
 }
 
-static int readInt(char* b) {
-    return (((int) b[0]) << 24) | (((int) b[1]) << 16) | (((int) b[2]) << 8) | ((int) b[3]);
+static uint32_t readInt(char* b) {
+	uint32_t* i = (uint32_t*)b;
+    return ntohl(*i);
+    //return (((int) b[0]) << 24) | (((int) b[1]) << 16) | (((int) b[2]) << 8) | ((int) b[3]);
 }
 
 static float readFloat(char* b) {
